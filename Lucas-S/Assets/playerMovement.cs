@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
-    public float gravity = 9.81f;
+    public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
     public Transform groundCheck;
@@ -21,7 +21,7 @@ public class playerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y > 0)
+        if(isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -38,7 +38,7 @@ public class playerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y -= gravity * Time.deltaTime;
+        velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }
