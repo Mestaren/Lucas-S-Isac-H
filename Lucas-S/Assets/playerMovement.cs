@@ -10,6 +10,8 @@ public class playerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
+    public float runSpeed = 24f;
+
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -41,5 +43,11 @@ public class playerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        {
+            speed = runSpeed;
+        }
+       
     }
 }
