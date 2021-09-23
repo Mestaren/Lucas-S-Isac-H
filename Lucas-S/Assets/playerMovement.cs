@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
-    public float gravity = -9.81f;
+    public float gravity = -60f;
     public float jumpHeight = 3f;
 
     public float runSpeed = 24f;
@@ -16,8 +16,19 @@ public class playerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    public float wallRunSpeed = 16f;
+    public float wallRunTime = 3f;
+    float originalTime;
+
+    bool wallRun;
+
     Vector3 velocity;
     bool isGrounded;
+
+    private void Start()
+    {
+        originalTime = wallRunTime;
+    }
 
     void Update()
     {
@@ -56,5 +67,18 @@ public class playerMovement : MonoBehaviour
 
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == ("wall"))
+        {
+            gravity = -3f;
+            speed = 20f;
+        }
+        else if (hit.gameObject.tag != ("wall"))
+        {
+            gravity = -60f;
+            speed = 12f;
+        }
+    }
 }
 
