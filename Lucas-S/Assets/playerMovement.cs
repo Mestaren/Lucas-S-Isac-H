@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -10,34 +8,28 @@ public class playerMovement : MonoBehaviour
     public float gravity = -60f;
     public float jumpHeight = 3f;
 
-    public float runSpeed = 24f;
+    public float runBoost = 24f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    public float wallRunSpeed = 16f;
-    public float wallRunTime = 3f;
-    float originalTime;
+    public Transform wallCheck;
+    public float wallDistance = 90f;
+    public LayerMask wallMask;
 
-    bool wallRun;
+    bool isWalled;
 
     Vector3 velocity;
     bool isGrounded;
 
-    private void Start()
-    {
-        originalTime = wallRunTime;
-    }
-
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        
+        isWalled = Physics.CheckSphere(wallCheck.position, wallDistance, wallMask);
 
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
+
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -55,30 +47,29 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        /*if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = runSpeed;
+            speed = runBoost;
         }
-
         else
         {
             speed = 12f;
-        }
-
-    }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.gameObject.tag == ("wall"))
+        }*/
+        
+        /*if (isWalled && !isGrounded)
         {
-            gravity = -3f;
-            speed = 20f;
+            gravity = -4f;
         }
-        else if (hit.gameObject.tag != ("wall"))
+        else
         {
             gravity = -60f;
-            speed = 12f;
-        }
+        }*/
+
+        gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
+        speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)));
     }
+
+
+
 }
 
