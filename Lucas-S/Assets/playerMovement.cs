@@ -15,7 +15,7 @@ public class playerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     public Transform wallCheck;
-    public float wallDistance = 90f;
+    public float wallDistance = 0.4f;
     public LayerMask wallMask;
 
     bool isWalled;
@@ -29,7 +29,10 @@ public class playerMovement : MonoBehaviour
         
         isWalled = Physics.CheckSphere(wallCheck.position, wallDistance, wallMask);
 
-
+        if(isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -42,33 +45,33 @@ public class playerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-
+   
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
 
-        /*if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = runBoost;
+            speed = 24f;
         }
         else
         {
             speed = 12f;
-        }*/
+        }
+
         
-        /*if (isWalled && !isGrounded)
+        if (isWalled && !isGrounded)
         {
             gravity = -4f;
         }
         else
         {
             gravity = -60f;
-        }*/
+        }
 
-        gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
-        speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)));
+        //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
+        //speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)))
     }
-
 
 
 }
