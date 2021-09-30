@@ -34,6 +34,11 @@ public class playerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
+        if (isWalled && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -62,7 +67,7 @@ public class playerMovement : MonoBehaviour
         
         if (isWalled && !isGrounded)
         {
-            gravity = -4f;
+            gravity = -50f;
         }
         else
         {
