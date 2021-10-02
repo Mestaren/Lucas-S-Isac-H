@@ -289,6 +289,7 @@ MonoBehaviour:
   speed: 12
   gravity: -60
   jumpHeight: 4
+  wallJumpHeight: 6
   runBoost: 12
   groundCheck: {fileID: 1515571887}
   groundDistance: 0.4
@@ -6775,7 +6776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075005125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.674835, y: -7.36586, z: -65.28485}
+  m_LocalPosition: {x: -7.674835, y: -3.3, z: -65.28485}
   m_LocalScale: {x: 16.280668, y: 0.56764, z: 39.718327}
   m_Children: []
   m_Father: {fileID: 2114215997}
@@ -12773,7 +12774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709895951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.383, z: -12.71}
+  m_LocalPosition: {x: 0, y: 0.82, z: -12.71}
   m_LocalScale: {x: 1, y: 0.067865, z: 1}
   m_Children: []
   m_Father: {fileID: 649847934}

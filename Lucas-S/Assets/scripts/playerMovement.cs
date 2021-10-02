@@ -8,12 +8,16 @@ public class playerMovement : MonoBehaviour
     public float gravity = -60f;
     public float jumpHeight = 3f;
 
+    public float wallJumpHeight = 6f;
+
     public float runBoost = 24f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+
+    //Wall Run
     public Transform wallCheck;
     public float wallDistance = 0.4f;
     public LayerMask wallMask;
@@ -21,11 +25,11 @@ public class playerMovement : MonoBehaviour
     public Transform wallChackLeft;
     public float walldistanceLeft = 0.4f;
 
-   // public float z;
-   // public GameObject FPplayer;
-
     bool isWalled;
     bool isWalledLeft;
+
+    //jetpack
+    bool isAired;
 
     Vector3 velocity;
     bool isGrounded;
@@ -33,14 +37,14 @@ public class playerMovement : MonoBehaviour
     
 
     void Update()
-    {
-
-        
+    {     
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
         isWalled = Physics.CheckSphere(wallCheck.position, wallDistance, wallMask);
 
         isWalledLeft = Physics.CheckSphere(wallChackLeft.position, walldistanceLeft, wallMask);
+
+        isAired = !isGrounded && !isWalled && !isWalledLeft;
 
         if (isGrounded && velocity.y < 0)
         {
@@ -73,6 +77,11 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        if (Input.GetButtonDown("Jump") && !isGrounded && isWalled)
+        {
+            velocity.y = Mathf.Sqrt(wallJumpHeight * -2f * gravity);
+        }
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = 24f;
@@ -87,22 +96,30 @@ public class playerMovement : MonoBehaviour
         {
             gravity = -55f;
 
-           
+            //kamera tilt
+
             //GetComponent<Transform>().rotation = Quaternion.Euler(0, 0,-25);
         }
         else
         {
             gravity = -60f;
+
+            //kamera tilt reset
+
           //GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
         }
 
         if (isWalledLeft && !isGrounded)
         {
             gravity = -55f;
+
+            //kamera tilt
         }
         else
         {
             gravity = -60f;
+
+            //kamera tlit reset
         }
 
         //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
