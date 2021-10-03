@@ -82,6 +82,11 @@ public class playerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(wallJumpHeight * -2f * gravity);
         }
 
+        if (Input.GetButtonDown("Jump") && !isGrounded && !isWalled && isWalledLeft)
+        {
+            velocity.y = Mathf.Sqrt(wallJumpHeight * -2f * gravity);
+        }
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = 24f;
