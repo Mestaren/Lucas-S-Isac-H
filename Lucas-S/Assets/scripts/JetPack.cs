@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetPack : MonoBehaviour
+/*public class JetPack : MonoBehaviour
 {
     CharacterController CC;
     playerMovement PM;
+    public float Velocity = 50f;
+
+    Vector3 Up;
 
     void Start()
     {
@@ -18,8 +21,9 @@ public class JetPack : MonoBehaviour
     {
       if (Input.GetKey(KeyCode.F))
         {
-            Vector3 velocity = new Vector3(0, 10, 0);
-            PM.velocity(velocity);
+            Vector3 Up = new Vector3(0, 1000, 0);
+            Velocity = 100;
+
         }
     }
-}
+}/**/

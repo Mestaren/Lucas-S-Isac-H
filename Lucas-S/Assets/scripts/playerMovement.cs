@@ -34,6 +34,8 @@ public class playerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public ParticleSystem ps;
+
     
 
     void Update()
@@ -129,6 +131,19 @@ public class playerMovement : MonoBehaviour
 
         //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
         //speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)))
+
+        //jetpack
+
+        if (!isGrounded && Input.GetKey(KeyCode.Space) && !isWalled && !isWalledLeft)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+            ps.Play();
+        }
+        else
+        {
+            ps.Stop();
+        }
     }
 
 
