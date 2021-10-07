@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class mouselook : MonoBehaviour
 {
+    [Header("camtilt")]
+    [SerializeField] playerMovement playerMovement;
+
     public float mouseSensetivity = 100f;
     public Transform playerBody;
     float Xrotation = 0f;
+    float Yrotation = 0f;
+
 
     void Start()
     {
@@ -22,7 +27,7 @@ public class mouselook : MonoBehaviour
         Xrotation -= mouseY;
         Xrotation = Mathf.Clamp(Xrotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(Xrotation, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(Xrotation, Yrotation, playerMovement.tilt);
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }

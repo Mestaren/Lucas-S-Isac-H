@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+
     public CharacterController controller;
 
     public float speed = 12f;
@@ -29,14 +30,27 @@ public class playerMovement : MonoBehaviour
     bool isWalledLeft;
 
     //jetpack
-    bool isAired;
+    
 
     Vector3 velocity;
     bool isGrounded;
 
     public ParticleSystem ps;
 
+    [Header ("Camera")]
     
+  [SerializeField]  private Camera cam;
+    [SerializeField] private float fov;
+    [SerializeField] private float wallRunfov;
+    [SerializeField] private float wallRunfovTime;
+    [SerializeField] private float camTilt;
+    [SerializeField] private float camTiltTime;
+
+    public float tilt { get; private set; }
+
+
+
+
 
     void Update()
     {     
@@ -46,8 +60,7 @@ public class playerMovement : MonoBehaviour
 
         isWalledLeft = Physics.CheckSphere(wallChackLeft.position, walldistanceLeft, wallMask);
 
-        isAired = !isGrounded && !isWalled && !isWalledLeft;
-
+        
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -104,7 +117,9 @@ public class playerMovement : MonoBehaviour
             gravity = -55f;
 
             //kamera tilt
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, wallRunfov, wallRunfovTime * Time.deltaTime);
 
+            tilt = Mathf.Lerp(tilt, camTilt, camTiltTime * Time.deltaTime);
             //GetComponent<Transform>().rotation = Quaternion.Euler(0, 0,-25);
         }
         else
@@ -112,8 +127,10 @@ public class playerMovement : MonoBehaviour
             gravity = -60f;
 
             //kamera tilt reset
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);
 
-          //GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+            tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
+            //GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
         }
 
         if (isWalledLeft && !isGrounded)
@@ -121,12 +138,18 @@ public class playerMovement : MonoBehaviour
             gravity = -55f;
 
             //kamera tilt
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, wallRunfov, wallRunfovTime * Time.deltaTime);
+
+            tilt = Mathf.Lerp(tilt, -camTilt, camTiltTime * Time.deltaTime);
         }
         else
         {
             gravity = -60f;
 
             //kamera tlit reset
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);
+
+            tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
         }
 
         //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
