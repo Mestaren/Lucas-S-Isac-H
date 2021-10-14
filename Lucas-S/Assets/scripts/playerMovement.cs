@@ -29,6 +29,7 @@ public class playerMovement : MonoBehaviour
     bool isWalled;
     bool isWalledLeft;
 
+
     //jetpack
 
 
@@ -48,9 +49,11 @@ public class playerMovement : MonoBehaviour
 
     public float tilt { get; private set; }
 
+    public float TimeSpeed = 1f;
+    public float NormSpeed = 1f;
+    public float SlowSpeed = 0.01f;
 
-
-
+    private bool time = true;
 
     void Update()
     {
@@ -154,31 +157,36 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Time.timeScale = 0.5f;
+            if (time)
+            {
+                Time.timeScale = 0.1f;
+                time = false;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                time = true;
+            }
+
+
+            //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
+            //speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)))
+
+            //jetpack
+
+            /*  if (!isGrounded && Input.GetKey(KeyCode.Space) && !isWalled && !isWalledLeft)
+              {
+                  velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+                  ps.Play();
+              }
+              else
+              {
+                  ps.Stop();
+              }*/
         }
-        else
-            Time.timeScale = 1f;
-        
-    
 
 
-        //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
-        //speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)))
-
-        //jetpack
-
-      /*  if (!isGrounded && Input.GetKey(KeyCode.Space) && !isWalled && !isWalledLeft)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
-            ps.Play();
-        }
-        else
-        {
-            ps.Stop();
-        }*/
     }
-
-
 }
 
