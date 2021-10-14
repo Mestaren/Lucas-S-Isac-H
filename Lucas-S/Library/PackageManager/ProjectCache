@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637698129293618733
-    m_Hash: 2386524674
+      ticks: 637698141177059060
+    m_Hash: 1017196492
   m_LockFileStatus:
     m_FilePath: C:/Users/lucas.svensson1/Documents/GitHub/Lucas-S/Lucas-S/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637698129293698527
-    m_Hash: 2272497192
+      ticks: 637698141177118894
+    m_Hash: 136902412
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -2718,6 +2718,7 @@ m_PackageAssets:
         - 2.0.0-preview.2
         - 2.0.0
         - 2.0.1-preview.1
+        - 2.0.2
         compatible:
         - 1.0.0-preview.2
         - 1.0.0-preview.3
@@ -2729,7 +2730,8 @@ m_PackageAssets:
         - 2.0.0-preview.2
         - 2.0.0
         - 2.0.1-preview.1
-        verified: 2.0.0
+        - 2.0.2
+        verified: 2.0.2
       dependencies: []
       resolvedDependencies: []
       keywords: []
