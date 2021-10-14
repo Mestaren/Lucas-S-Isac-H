@@ -30,16 +30,16 @@ public class playerMovement : MonoBehaviour
     bool isWalledLeft;
 
     //jetpack
-    
+
 
     Vector3 velocity;
     bool isGrounded;
 
     public ParticleSystem ps;
 
-    [Header ("Camera")]
-    
-  [SerializeField]  private Camera cam;
+    [Header("Camera")]
+
+    [SerializeField] private Camera cam;
     [SerializeField] private float fov;
     [SerializeField] private float wallRunfov;
     [SerializeField] private float wallRunfovTime;
@@ -53,14 +53,14 @@ public class playerMovement : MonoBehaviour
 
 
     void Update()
-    {     
+    {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
+
         isWalled = Physics.CheckSphere(wallCheck.position, wallDistance, wallMask);
 
         isWalledLeft = Physics.CheckSphere(wallChackLeft.position, walldistanceLeft, wallMask);
 
-        
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -87,7 +87,7 @@ public class playerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-   
+
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
@@ -111,7 +111,7 @@ public class playerMovement : MonoBehaviour
             speed = 12f;
         }
 
-        
+
         if (isWalled && !isGrounded)
         {
             gravity = -55f;
@@ -152,12 +152,22 @@ public class playerMovement : MonoBehaviour
             tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Time.timeScale = 0.5f;
+        }
+        else
+            Time.timeScale = 1f;
+        
+    
+
+
         //gravity = -60f + (56f * System.Convert.ToSingle(isWalled && !isGrounded));
         //speed = 12f + (runBoost * System.Convert.ToSingle(Input.GetKey(KeyCode.LeftShift)))
 
         //jetpack
 
-        if (!isGrounded && Input.GetKey(KeyCode.Space) && !isWalled && !isWalledLeft)
+      /*  if (!isGrounded && Input.GetKey(KeyCode.Space) && !isWalled && !isWalledLeft)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
@@ -166,7 +176,7 @@ public class playerMovement : MonoBehaviour
         else
         {
             ps.Stop();
-        }
+        }*/
     }
 
 
