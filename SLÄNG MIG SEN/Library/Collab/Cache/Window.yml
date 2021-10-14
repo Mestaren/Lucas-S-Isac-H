@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe70aba2e7074048aca5de573b64a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SimpleSelectedItems:
+    m_Keys:
+    - Assets/KinematicSoup.meta
+    - Assets/KinematicSoup/Editor.meta
+    - Assets/KinematicSoup/Editor/KSCommon-Editor.dll
+    - Assets/KinematicSoup/Editor/KSCommon-Editor.dll.meta
+    - Assets/KinematicSoup/KSCommon.dll
+    - Assets/KinematicSoup/KSCommon.dll.meta
+    - Assets/KinematicSoup/SceneFusion.meta
+    - Assets/KinematicSoup/SceneFusion/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Editor/KSSceneFusion-Editor.dll
+    - Assets/KinematicSoup/SceneFusion/Editor/KSSceneFusion-Editor.dll.meta
+    - Assets/KinematicSoup/SceneFusion/Editor/New Lighting Settings 1.lighting
+    - Assets/KinematicSoup/SceneFusion/Editor/New Lighting Settings 1.lighting.meta
+    - Assets/KinematicSoup/SceneFusion/Editor/New Lighting Settings.lighting
+    - Assets/KinematicSoup/SceneFusion/Editor/New Lighting Settings.lighting.meta
+    - Assets/KinematicSoup/SceneFusion/Editor/SceneFusionConfig.asset
+    - Assets/KinematicSoup/SceneFusion/Editor/SceneFusionConfig.asset.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Cinemachine.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Cinemachine/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Cinemachine/Editor/CinemachineExtension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/Cinemachine/Editor/CinemachineExtension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/EditorVR.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/EditorVR/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/EditorVR/Editor/EditorVRExtension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/EditorVR/Editor/EditorVRExtension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/Editor/Ferr2DExtension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/Editor/Ferr2DExtension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/Editor/sfFerr2DAdaptorEditor.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/Editor/sfFerr2DAdaptorEditor.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/sfFerr2DAdaptor.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/Ferr2D/sfFerr2DAdaptor.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/MicroSplat.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/MicroSplat/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/MicroSplat/Editor/MicroSplatExtension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/MicroSplat/Editor/MicroSplatExtension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/PlayMaker.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/PlayMaker/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/PlayMaker/Editor/PlayMakerExtension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/PlayMaker/Editor/PlayMakerExtension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/ProBuilder.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/ProBuilder/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/ProBuilder/Editor/ProBuilderExtension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/ProBuilder/Editor/ProBuilderExtension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/TerrainComposer2.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/TerrainComposer2/Editor.meta
+    - Assets/KinematicSoup/SceneFusion/Extensions/TerrainComposer2/Editor/TerrainComposer2Extension.cs
+    - Assets/KinematicSoup/SceneFusion/Extensions/TerrainComposer2/Editor/TerrainComposer2Extension.cs.meta
+    - Assets/KinematicSoup/SceneFusion/FusionRoot.cs
+    - Assets/KinematicSoup/SceneFusion/FusionRoot.cs.meta
+    - Assets/KinematicSoup/SceneFusion/KSSceneFusion.dll
+    - Assets/KinematicSoup/SceneFusion/KSSceneFusion.dll.meta
+    - Assets/KinematicSoup/SceneFusion/Materials.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/BrushPreview.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/BrushPreview.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/Drag.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/Drag.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/Drag2D.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/Drag2D.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/LockCutout.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/LockCutout.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/Locked.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/Locked.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/NewBrushPreview.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/NewBrushPreview.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/ksCam.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/ksCam.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Materials/ksCamHD.mat
+    - Assets/KinematicSoup/SceneFusion/Materials/ksCamHD.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Models.meta
+    - Assets/KinematicSoup/SceneFusion/Models/Materials.meta
+    - Assets/KinematicSoup/SceneFusion/Models/Materials/No Name.mat
+    - Assets/KinematicSoup/SceneFusion/Models/Materials/No Name.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Models/Materials/defaultMat.mat
+    - Assets/KinematicSoup/SceneFusion/Models/Materials/defaultMat.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Models/Materials/lambert1.mat
+    - Assets/KinematicSoup/SceneFusion/Models/Materials/lambert1.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Models/body.obj
+    - Assets/KinematicSoup/SceneFusion/Models/body.obj.meta
+    - Assets/KinematicSoup/SceneFusion/Models/camera.fbx
+    - Assets/KinematicSoup/SceneFusion/Models/camera.fbx.meta
+    - Assets/KinematicSoup/SceneFusion/Models/head.obj
+    - Assets/KinematicSoup/SceneFusion/Models/head.obj.meta
+    - Assets/KinematicSoup/SceneFusion/Models/hmd.obj
+    - Assets/KinematicSoup/SceneFusion/Models/hmd.obj.meta
+    - Assets/KinematicSoup/SceneFusion/Models/ksController.fbx
+    - Assets/KinematicSoup/SceneFusion/Models/ksController.fbx.meta
+    - Assets/KinematicSoup/SceneFusion/Models/ksHeadset.fbx
+    - Assets/KinematicSoup/SceneFusion/Models/ksHeadset.fbx.meta
+    - Assets/KinematicSoup/SceneFusion/Models/oculus_l.obj
+    - Assets/KinematicSoup/SceneFusion/Models/oculus_l.obj.meta
+    - Assets/KinematicSoup/SceneFusion/Models/oculus_r.obj
+    - Assets/KinematicSoup/SceneFusion/Models/oculus_r.obj.meta
+    - Assets/KinematicSoup/SceneFusion/Models/vive_low_poly.obj
+    - Assets/KinematicSoup/SceneFusion/Models/vive_low_poly.obj.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/BillboardCutout.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/BillboardCutout.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/BrushPreview.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/BrushPreview.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/Cutout.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/Cutout.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/Drag.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/Drag.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/Drag2D.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/Drag2D.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/KSBrushPreview.cginc
+    - Assets/KinematicSoup/SceneFusion/Shaders/KSBrushPreview.cginc.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/Lock.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/Lock.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Shaders/Missing.shader
+    - Assets/KinematicSoup/SceneFusion/Shaders/Missing.shader.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Animator Controller.controller
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Animator Controller.controller.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Animator Override Controller.overrideController
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Animator Override Controller.overrideController.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Audio Mixer.mixer
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Audio Mixer.mixer.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/AudioClip.wav
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/AudioClip.wav.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Billboard.asset
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Billboard.asset.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/BlackFrame.bin
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/BlackFrame.bin.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/DoNothing.compute
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/DoNothing.compute.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Flare.flare
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Flare.flare.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/GUI Skin.guiskin
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/GUI Skin.guiskin.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/GameObject.prefab
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/GameObject.prefab.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Material.mat
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Material.mat.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Physic Material.physicMaterial
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Physic Material.physicMaterial.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Physics2D Material.physicsMaterial2D
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Physics2D Material.physicsMaterial2D.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Render Texture.renderTexture
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Render Texture.renderTexture.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Scene.unity
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Scene.unity.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Sprite Atlas.spriteatlas
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/Sprite Atlas.spriteatlas.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/StandIn.fbx
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/StandIn.fbx.meta
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/TextAsset.txt
+    - Assets/KinematicSoup/SceneFusion/Stand-Ins/TextAsset.txt.meta
+    - Assets/KinematicSoup/SceneFusion/Textures.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Camera.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Camera.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/CameraOff.png
+    - Assets/KinematicSoup/SceneFusion/Textures/CameraOff.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Check16.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Check16.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/LargeLock.png
+    - Assets/KinematicSoup/SceneFusion/Textures/LargeLock.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Lock16.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Lock16.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Locked.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Locked.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Note.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Note.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/NoteBig.png
+    - Assets/KinematicSoup/SceneFusion/Textures/NoteBig.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/NoteOff.png
+    - Assets/KinematicSoup/SceneFusion/Textures/NoteOff.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/NoteSmall.png
+    - Assets/KinematicSoup/SceneFusion/Textures/NoteSmall.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Offline.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Offline.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Online.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Online.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/PartialLock.png
+    - Assets/KinematicSoup/SceneFusion/Textures/PartialLock.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/PermaLock.png
+    - Assets/KinematicSoup/SceneFusion/Textures/PermaLock.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Question.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Question.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/QuestionSmall.png
+    - Assets/KinematicSoup/SceneFusion/Textures/QuestionSmall.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/RoundCorners.png
+    - Assets/KinematicSoup/SceneFusion/Textures/RoundCorners.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/RoundCornersWithBorder.png
+    - Assets/KinematicSoup/SceneFusion/Textures/RoundCornersWithBorder.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/SFLogoDark.png
+    - Assets/KinematicSoup/SceneFusion/Textures/SFLogoDark.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/SFLogoLight.png
+    - Assets/KinematicSoup/SceneFusion/Textures/SFLogoLight.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/SceneFusionDark.png
+    - Assets/KinematicSoup/SceneFusion/Textures/SceneFusionDark.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/SceneFusionLight.png
+    - Assets/KinematicSoup/SceneFusion/Textures/SceneFusionLight.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/SmileyBase.png
+    - Assets/KinematicSoup/SceneFusion/Textures/SmileyBase.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/SmileyFace.png
+    - Assets/KinematicSoup/SceneFusion/Textures/SmileyFace.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Spinner.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Spinner.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Tail.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Tail.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/TerrainBrush.png
+    - Assets/KinematicSoup/SceneFusion/Textures/TerrainBrush.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/TerrainBrushOff.png
+    - Assets/KinematicSoup/SceneFusion/Textures/TerrainBrushOff.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Thumb.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Thumb.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Unlocked.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Unlocked.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Warning.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Warning.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/Warning16.png
+    - Assets/KinematicSoup/SceneFusion/Textures/Warning16.png.meta
+    - Assets/KinematicSoup/SceneFusion/Textures/WarningLarge.png
+    - Assets/KinematicSoup/SceneFusion/Textures/WarningLarge.png.meta
+    - Assets/KinematicSoup/SceneFusion/ksAvatar.prefab
+    - Assets/KinematicSoup/SceneFusion/ksAvatar.prefab.meta
+    - Assets/KinematicSoup/SceneFusion/ksCam.prefab
+    - Assets/KinematicSoup/SceneFusion/ksCam.prefab.meta
+    - Assets/KinematicSoup/SceneFusion/ksOculusLeft.prefab
+    - Assets/KinematicSoup/SceneFusion/ksOculusLeft.prefab.meta
+    - Assets/KinematicSoup/SceneFusion/ksOculusRight.prefab
+    - Assets/KinematicSoup/SceneFusion/ksOculusRight.prefab.meta
+    - Assets/KinematicSoup/SceneFusion/ksVive.prefab
+    - Assets/KinematicSoup/SceneFusion/ksVive.prefab.meta
+    - Assets/Scenes.meta
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scenes/SampleScene.unity.meta
+    - 
+    m_Values: 010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+  RevisionSummary: 
+  ChangesSearchValue: 
+  SelectedHistoryRevision: 
+  HistoryPageNumber: 0
+  TabIndex: 0
