@@ -35,6 +35,8 @@ public class playerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    public float XtraJump=1;
+    
 
     public ParticleSystem ps;
 
@@ -103,7 +105,31 @@ public class playerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !isGrounded && !isWalled && isWalledLeft)
         {
             velocity.y = Mathf.Sqrt(wallJumpHeight * -2f * gravity);
+          
         }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isGrounded == false)
+
+            {
+                velocity.y = Mathf.Sqrt(wallJumpHeight * -100f * gravity);
+                XtraJump- 1;
+                
+            }
+        }
+            if (isGrounded)
+            {
+                XtraJump = 0;
+            
+                
+            }
+        else
+        {
+            XtraJump = 1;
+        }
+            
+        
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -113,6 +139,7 @@ public class playerMovement : MonoBehaviour
         {
             speed = 12f;
         }
+     
 
 
         if (isWalled && !isGrounded)

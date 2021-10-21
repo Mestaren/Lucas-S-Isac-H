@@ -66,14 +66,8 @@ public class EnemyAi : MonoBehaviour
     }
     private void AttackPlayer()
     {
-        agent.SetDestination(player.position);
-    }
-    private void ChasePlayer()
-    {
-        agent.SetDestination(player.position);
-
-        transform.LookAt(player);
-
+       // agent.SetDestination(player.position); 
+        
         if (!alreadyAttack)
         {
 
@@ -83,6 +77,14 @@ public class EnemyAi : MonoBehaviour
             alreadyAttack = true;
             Invoke(nameof(ResetAttack), timeBetweenAttack);
         }
+    }
+    private void ChasePlayer()
+    {
+        agent.SetDestination(player.position);
+
+        transform.LookAt(player);
+
+       
     }
 
     private void ResetAttack()
