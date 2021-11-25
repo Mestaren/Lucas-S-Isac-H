@@ -1,0 +1,2 @@
+D:\gameawards\Lucas-S-Isac-H\Lucas-S\obj\Debug\NavMeshComponentsEditor.csproj.AssemblyReference.cache
+D:\gameawards\Lucas-S-Isac-H\Lucas-S\obj\Debug\NavMeshComponentsEditor.csproj.CoreCompileInputs.cache
