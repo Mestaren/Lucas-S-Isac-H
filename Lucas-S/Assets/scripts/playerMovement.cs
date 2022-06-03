@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
+    //gjord av isac och Lucas
 {
 
     public CharacterController controller;
@@ -213,7 +214,12 @@ public class playerMovement : MonoBehaviour
               }*/
         }
 
-
+        //Lucas:
+        //Jag har gjort Hopp funktionen och wall run funktionerna. och basically det jag gjorde var att jag använde Booleans för att checka om jag rörde marken för at hoppa eller rörde väg för att springa på vägen
+        // Det jag senare lärde mig är att det är mycket lättare att använda sig av raycast och ändå om det är mer komplicerat att förstå så hade det nog kunnat underlätta antal rader kod som man behöver skriva
+        
+        //Isac:
+        //
     }
 }
 

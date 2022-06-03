@@ -2,6 +2,7 @@
 using UnityEngine;
 
 public class Gun : MonoBehaviour
+    //gjord av isac
 {
     public float damage = 10f;
     public float range = 100f;

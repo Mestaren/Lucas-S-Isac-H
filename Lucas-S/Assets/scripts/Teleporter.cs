@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Teleporter : MonoBehaviour
+
+    //gjort av Lucas
 {
     public Transform TeleportTarget;
     public GameObject FPplayer;
