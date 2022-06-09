@@ -31,3 +31,5 @@ public class mouselook : MonoBehaviour
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
+//Isac:
+//All denna kod är kopierad från videon, dock så var jag tvungen att ta bort tidens påverkan ifrån transform.localRotation för att få slo-mo att fungera, då man inte vill att kamerans sensitivitet ska påverkas av tiden.

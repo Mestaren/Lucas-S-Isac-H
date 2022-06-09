@@ -20,3 +20,5 @@ public class Target : MonoBehaviour
     }
 
 }
+//Isac:
+//Detta script ger fienden en bestämd mängd hälsa som minskar om den blir träffad av ett skott.

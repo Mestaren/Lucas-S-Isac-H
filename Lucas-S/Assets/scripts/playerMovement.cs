@@ -81,13 +81,15 @@ public class playerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-
+        //simpel movement -kod ifrån videon 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+        //slut på enkel movement
+
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -131,7 +133,7 @@ public class playerMovement : MonoBehaviour
          }
              */
 
-
+        //Sprint. Om man håller inne vänster shift-knapp så dubblas rörelsehastigheten. Detta kan göras om till en toggle med hjälp av booleans (samma som slo-mo längre ner).
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = 24f;
@@ -183,6 +185,7 @@ public class playerMovement : MonoBehaviour
             tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
         }
 
+        //Enkel slow-motion kod. Använder sig av en boolean som blir falsk när tiden saktas ner. Detta låter tangenten F ha olika funktioner beroende på om slo-mo är aktiverat.
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (time)
@@ -219,7 +222,7 @@ public class playerMovement : MonoBehaviour
         // Det jag senare lärde mig är att det är mycket lättare att använda sig av raycast och ändå om det är mer komplicerat att förstå så hade det nog kunnat underlätta antal rader kod som man behöver skriva
         
         //Isac:
-        //
+        //Det jag har gjort i denna kod är att kopiera av grundkoden vi fick. Efter detta så har jag även Skrivit slo-mo koden, plus camera-tilt och ökad FOV i wallrun.
     }
 }
 

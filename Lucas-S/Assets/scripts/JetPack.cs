@@ -27,3 +27,5 @@ using UnityEngine;
         }
     }
 }/**/
+//Isac
+//Hela denna kod är gjord av Lucas. Allt fungerade, men vi bestämde att en jetpack inte var nödvändigt för detta spel.

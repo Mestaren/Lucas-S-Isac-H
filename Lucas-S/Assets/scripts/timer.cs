@@ -32,3 +32,5 @@ public class timer : MonoBehaviour
 
     }*/
 }
+//Isac:
+//Ingen aning vad detta är, tbh. Troligtvis ett skämt
